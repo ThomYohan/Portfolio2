@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Form Factor",
+    "description": "react web app that utilizes redux to track your achievements relating to macronutrients, micronutrients, and workout details to provide a chart showing both in tandem with each other over the span of a week.",
+    "img": "vscodefitnesse.png",
+    "tech": ["Typescript", "Node"],
+    "githuburl": "https://github.com/chrisotto6/VSCodeFitNesse",
+    "projecturl": "https://marketplace.visualstudio.com/items?itemName=chrisotto.vscodefitnesse"
+  },
+  {
+    "name": "ShifTradr",
+    "description": "full CRUD web application that allows employees to post and trade liability of work shifts in a streamlined fashion. Along with trading of shifts, users can message each other to speak about shift and trade details, with real-time updates.",
+    "img": "chrisottodev.png",
+    "tech": ["Gatsby", "React", "GraphQL", "Node"],
+    "githuburl": "https://github.com/chrisotto6/chrisottodev",
+    "projecturl": "https://chrisotto.dev/"
+  },
+  {
+    "name": "FitNesse Format",
+    "description": "NPM package to format a string the same as the FitNesse client would.",
+    "img": "fitnesseformat.png",
+    "tech": ["Javascript", "Node"],
+    "githuburl": "https://github.com/chrisotto6/fitnesse-format",
+    "projecturl": "https://www.npmjs.com/package/fitnesse-format"
+  },
+  {
+    "name": "Card Shuffling",
+    "description": "A simple web application to deal cards to players.",
+    "img": "cardshuffling.png",
+    "tech": ["Javascript", "Node"],
+    "githuburl": "https://github.com/chrisotto6/card-shuffling",
+    "projecturl": "https://card-shuffling.chrisotto.dev/"
+  }
+]

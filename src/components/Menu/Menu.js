@@ -1,9 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-require("core-js/fn/array/from");
 
+import { FaCode } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa/";
 import { FaHome } from "react-icons/fa/";
-import { FaSearch, FaEnvelope, FaTag, FaUser, FaCode } from "react-icons/fa/";
+import { FaSearch } from "react-icons/fa/";
+import { FaTag } from "react-icons/fa/";
+import { FaUser } from "react-icons/fa/";
 
 import Item from "./Item";
 import Expand from "./Expand";
@@ -35,7 +38,6 @@ class Menu extends React.Component {
     fixed: PropTypes.bool.isRequired,
     screenWidth: PropTypes.number.isRequired,
     fontLoaded: PropTypes.bool.isRequired,
-    pages: PropTypes.array.isRequired,
     theme: PropTypes.object.isRequired
   };
 
@@ -115,7 +117,7 @@ class Menu extends React.Component {
   };
 
   closeMenu = e => {
-    //e.preventDefault();
+    // e.preventDefault();
 
     if (this.state.open) {
       this.setState({ open: false });
@@ -136,7 +138,7 @@ class Menu extends React.Component {
 
     return (
       <React.Fragment>
-        <nav className={`menu ${open ? "open" : ""}`} rel="js-menu">
+        <nav role="navigation" className={`menu ${open ? "open" : ""}`} rel="js-menu">
           <ul className="itemList" ref={this.itemList}>
             {this.items.map(item => (
               <Item item={item} key={item.label} icon={item.icon} theme={theme} />
