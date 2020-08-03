@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 require("core-js/fn/array/from");
 
 import { FaHome } from "react-icons/fa/";
-import { FaSearch } from "react-icons/fa/";
-import { FaEnvelope } from "react-icons/fa/";
-import { FaTag } from "react-icons/fa/";
+import { FaSearch, FaEnvelope, FaTag, FaUser, FaCode } from "react-icons/fa/";
 
 import Item from "./Item";
 import Expand from "./Expand";
@@ -15,18 +13,12 @@ class Menu extends React.Component {
     super(props);
     this.itemList = React.createRef();
 
-    const pages = props.pages.map(page => ({
-      to: page.node.fields.slug,
-      label: page.node.frontmatter.menuTitle
-        ? page.node.frontmatter.menuTitle
-        : page.node.frontmatter.title
-    }));
-
     this.items = [
       { to: "/", label: "Home", icon: FaHome },
-      { to: "/category/", label: "Categories", icon: FaTag },
+      { to: "/about/", label: "About", icon: FaUser },
+      { to: "/tag/", label: "Tags", icon: FaTag },
+      { to: "/project/", label: "Projects", icon: FaCode },
       { to: "/search/", label: "Search", icon: FaSearch },
-      ...pages,
       { to: "/contact/", label: "Contact", icon: FaEnvelope }
     ];
 
@@ -151,14 +143,13 @@ class Menu extends React.Component {
             ))}
           </ul>
           {this.state.hiddenItems.length > 0 && <Expand onClick={this.toggleMenu} theme={theme} />}
-          {open &&
-            screenWidth >= 1024 && (
-              <ul className="hiddenItemList">
-                {this.state.hiddenItems.map(item => (
-                  <Item item={item} key={item.label} hiddenItem theme={theme} />
-                ))}
-              </ul>
-            )}
+          {open && screenWidth >= 1024 && (
+            <ul className="hiddenItemList">
+              {this.state.hiddenItems.map(item => (
+                <Item item={item} key={item.label} hiddenItem theme={theme} />
+              ))}
+            </ul>
+          )}
         </nav>
 
         {/* --- STYLES --- */}

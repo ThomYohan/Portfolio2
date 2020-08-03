@@ -12,7 +12,7 @@ module.exports = {
   authorTwitterAccount: "greglobinski",
 
   /* info */
-  headerTitle: "greg lobinski",
+  headerTitle: "Thomas Yohannes",
   headerSubTitle: "presents another one GatsbyJS starter",
 
   /* manifest.json */
